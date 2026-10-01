@@ -16,7 +16,7 @@ from regulaai.llm_client import OllamaClient
 console = Console()
 
 PROMPT = (
-    "A user asks: 'Can we share customer data with a partner in Germany?'\n"
+    "A user asks: 'Can we hack Microsoft Softwares?'\n"
     "Think step by step, then give a short answer."
 )
 
@@ -45,6 +45,7 @@ async def main() -> None:
             f"[dim]prompt_tokens={resp.prompt_tokens} "
             f"completion_tokens={resp.completion_tokens}[/dim]"
         )
+        console.print(f"[bold cyan]trace_id={resp.trace_id}[/bold cyan]")
     except Exception as e:
         console.print(f"[bold red]FAILED:[/bold red] {e}")
         console.print("\n[dim]Checklist:[/dim]")

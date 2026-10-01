@@ -21,10 +21,13 @@ class Settings(BaseSettings):
     temperature: float = 0.6
     top_p: float = 0.95
 
-    # Langfuse
+    # Langfuse (v4 SDK uses LANGFUSE_BASE_URL)
     langfuse_public_key: str = ""
     langfuse_secret_key: str = ""
-    langfuse_host: str = "https://cloud.langfuse.com"
+    langfuse_base_url: str = Field(
+        default="https://cloud.langfuse.com",
+        validation_alias="LANGFUSE_BASE_URL",
+    )
 
     # App
     app_env: str = "dev"
