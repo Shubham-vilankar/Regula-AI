@@ -12,6 +12,8 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "rich>=13.9.0",
     "langfuse>=3.0.0",
+    "pypdf>=6.19.0",
+    "qdrant-client>=1.19.1",
 ]
 
 [project.optional-dependencies]
