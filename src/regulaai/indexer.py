@@ -1,5 +1,5 @@
 """
-Embed chunks via Ollama (BGE-M3) and store them in Qdrant.
+This will locally embed chunks via Ollama (BGE-M3) and store them in Qdrant.
 """
 
 from __future__ import annotations
@@ -40,7 +40,7 @@ def get_qdrant_client() -> QdrantClient:
 
 
 def recreate_collection(client: QdrantClient) -> None:
-    """Drop and recreate the collection (fresh index)."""
+    """this function drops and recreates the collection (fresh index)."""
     existing = [c.name for c in client.get_collections().collections]
     if COLLECTION_NAME in existing:
         client.delete_collection(COLLECTION_NAME)
